@@ -26,3 +26,28 @@ def reverse(self, x: int) -> int:
             return 0
         else:
             return k
+            
+  #1365
+  class Solution:
+    def smallerNumbersThanCurrent(self, nums: List[int]) -> List[int]:
+        res = []
+        
+        l = len(nums)
+        for i in range(0,l):
+            count = 0
+            j = nums[i]
+            for k in range(0,l):
+                if (j > nums[k]):
+                    count = count + 1
+            res.append(count)
+                
+            
+        return res
+    
+    ''' result = []
+        tempNums = nums.copy()
+        nums.sort()
+        for n in tempNums:
+            result.append(nums.index(n))
+        return result
+    '''
