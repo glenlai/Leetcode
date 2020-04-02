@@ -1,3 +1,18 @@
+#1295 Runtime: 56 ms, faster than 39.90% of Python3 online submissions for Find Numbers with Even Number of Digits.
+class Solution:
+    def findNumbers(self, nums: List[int]) -> int:
+        
+        result = 0
+        l = len(nums)
+        for i in range(0,l):
+            dig = 0
+            while(nums[i]>=1):
+                nums[i]=nums[i]/10
+                dig = dig+1
+            if(dig%2==0):
+                result = result+1
+        return result
+                
 #709
 def toLowerCase(self, str: str) -> str:
         s = ''
