@@ -51,3 +51,14 @@ def reverse(self, x: int) -> int:
             result.append(nums.index(n))
         return result
     '''
+#1313  Runtime: 72 ms, faster than 37.42% of Python3 online submissions for Decompress Run-Length Encoded List.
+class Solution:
+    def decompressRLElist(self, nums: List[int]) -> List[int]:
+        my_list = []
+        l = len(nums)
+        for i in range(0,l-1,2):
+            f = (nums[i])
+            v = (nums[i+1])
+            my_list.extend([v for i in range(f)])
+            
+        return my_list
